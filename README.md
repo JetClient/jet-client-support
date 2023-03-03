@@ -1,5 +1,7 @@
+<img src="images/pluginIcon.svg" width="80" height="80" alt="icon" align="left"/>
 
-# JetClient
+JetClient
+===
 
 JetClient is a powerful HTTP client plugin for JetBrains IDEs (IntelliJ IDEA, GoLand, PyCharm, PhpStorm, etc.).
 It is similar to Postman but has some advantages:
@@ -15,6 +17,8 @@ It is similar to Postman but has some advantages:
   They are easily edited in the json5 editor and can be not only primitive types, but also objects and arrays.
 - **Powerful scripting** - write pre-request and test scripts for requests and folders, and even test suites that can
   reuse existing requests and folders.
+
+<img src="images/jet-client.png" width="1024" alt="JetClient plugin screenshot"/>
 
 
 ## Contents
