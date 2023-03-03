@@ -274,4 +274,4 @@ You can also use `jc.response.to.have.*` and `jc.response.to.be.*` to build your
 <a name="using-external-libraries"></a>
 ## Using external libraries
 The `require` function allows you to use external libraries in your scripts.
-See [Using external libraries](./using-external-libraries.md).
+See [examples of using libraries](./examples-of-using-libraries.md).
