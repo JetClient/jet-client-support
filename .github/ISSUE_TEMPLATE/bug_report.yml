@@ -1,0 +1,66 @@
+name: Bug Report
+description: File a bug report
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    attributes:
+      label: Describe the Issue
+      description: |
+        A high-level summary or description of the problem that you're facing.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce?
+      description: Provide as much detail as possible to reproduce the issue.
+      placeholder: |
+        1. Open a request tab
+        2. Select the Body tab
+        3. Select the `JSON` type 
+        4. See error message...
+      render: Markdown
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Operating System
+      description: Which OS are you using?
+      options:
+        - MacOS
+        - Linux
+        - Windows
+  - type: input
+    attributes:
+      label: IDE
+      description: What IDE are you using?
+      placeholder: IntelliJ IDEA Ultimate 2022.3.2
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: JetClient version
+      description: What version of JetClient plugin are you running?
+      placeholder: 2023.1.0
+      value: 2023.1.0
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log from `idea.log` (`Help > Show Log in Finder`)
+      render: Shell
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Screenshots, Videos, Additional Context
+      description: |
+        If you are reporting a UI based issue, please include screenshots or a short video to help visually explain the problem.
+        Ensure that the screenshots/videos do not contain any sensitive information such as API keys or Access Tokens.
+        Please add any other contextual information about the problem, that might be relevant and help explain the issue you're facing.
+    validations:
+      required: false
