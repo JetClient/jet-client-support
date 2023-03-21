@@ -1,10 +1,17 @@
 Change Log
 ----------
+## 2023.1.4 (2023-03-21)
+### Added
+- [#3](https://github.com/AntonShuvaev/jet-client-support/issues/3) Import from Postman
+### Fixed
+- [#5](https://github.com/AntonShuvaev/jet-client-support/issues/5) switching between light and dark themes breaks UI
+- NullPointerException when importing OpenAPI might occur in some cases
+- NullPointerException when saving request with new unsaved parent folder
+
 ## 2023.1.3 (2023-03-15)
 ### Added
 - Import from cURL
-- Action to navigate to the class associated with the request body 
-
+- Action to navigate to the class associated with the request body
 ### Fixed
 - NullPointerException when importing openapi might occur in some cases 
 - Select environment dropdown blinking in 2023.1 IDEs
