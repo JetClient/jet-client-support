@@ -1,5 +1,16 @@
 Change Log
 ----------
+## 2023.1.5 (2023-04-03)
+### Added
+- [#7](https://github.com/AntonShuvaev/jet-client-support/issues/7) Import request from CURL by pasting it to url field
+- Generating JSON request body from Java/Kotlin classes and OpenAPI (Swagger) schema
+- Action to fill JSON body with random data
+- Support external references in OpenAPI (Swagger) import
+- Navigation to/from OpenAPI (Swagger) schema
+- Ability to choose request naming strategy when importing from Postman
+### Fixed
+- NullPointerException when changing framework in folder properties to None
+
 ## 2023.1.4 (2023-03-21)
 ### Added
 - [#3](https://github.com/AntonShuvaev/jet-client-support/issues/3) Import from Postman
