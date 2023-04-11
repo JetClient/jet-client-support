@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2023.1.6 (2023-04-10)
+### Added
+- [#11](https://github.com/AntonShuvaev/jet-client-support/issues/11) Add documentation in the test library type definition file
+- [#9](https://github.com/AntonShuvaev/jet-client-support/issues/9) Display when request is running. Add action to cancel running request.
+### Fixed
+- JsonMappingException might occur when syncing requests on Windows
+- Local variables might be lost after restarting IDE on Windows
+- NoClassDefFoundError JCEFHtmlPanel might occur in Android Studio
+
 ## 2023.1.5 (2023-04-03)
 ### Added
 - [#7](https://github.com/AntonShuvaev/jet-client-support/issues/7) Import request from CURL by pasting it to url field
@@ -24,7 +33,7 @@ Change Log
 - Import from cURL
 - Action to navigate to the class associated with the request body
 ### Fixed
-- NullPointerException when importing openapi might occur in some cases 
+- NullPointerException when importing openapi might occur in some cases
 - Select environment dropdown blinking in 2023.1 IDEs
 
 ## 2023.1.2 (2023-03-09)
