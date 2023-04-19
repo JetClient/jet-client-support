@@ -23,6 +23,8 @@ It is similar to Postman but has some advantages:
 
 <img src="images/jet-client.png" width="1024" alt="JetClient plugin screenshot"/>
 
+Watch the [JetClient plugin video](https://youtu.be/hLPhPuoYjCY) to learn about the plugin features.
+
 
 ## Contents
 
