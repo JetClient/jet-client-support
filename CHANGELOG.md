@@ -1,5 +1,17 @@
 Change Log
 ----------
+## 2023.1.7 (2023-04-21)
+### Changed
+- Now test suite is the separate entity instead of an empty folder.
+- Requests that are sent by `jc.sendRequest` are now shown in test runner along with `jc.runRequest` requests.
+### Fixed
+- Changing draft request method is not reflected in request explorer
+- NullPointerException might occur when changing folder icon
+- IllegalStateException when undo changes in query parameter
+- `IllegalArgumentException: Empty scope collection` might occur when import with enabled `Search in libraries` option
+- Show error message when failed to import environments
+- Incorrect test count in test runner
+
 ## 2023.1.6 (2023-04-10)
 ### Added
 - [#11](https://github.com/AntonShuvaev/jet-client-support/issues/11) Add documentation in the test library type definition file
@@ -33,7 +45,7 @@ Change Log
 - Import from cURL
 - Action to navigate to the class associated with the request body
 ### Fixed
-- NullPointerException when importing openapi might occur in some cases
+- NullPointerException when importing openapi might occur in some cases 
 - Select environment dropdown blinking in 2023.1 IDEs
 
 ## 2023.1.2 (2023-03-09)
