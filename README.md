@@ -2,11 +2,11 @@
 
 JetClient
 ===
-[![Version](https://img.shields.io/jetbrains/plugin/v/21173?color=6b43fb)](https://plugins.jetbrains.com/plugin/21173-jetclient)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/21173?color=03d7dc)](https://plugins.jetbrains.com/plugin/21173-jetclient)
-[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/21173)](https://plugins.jetbrains.com/plugin/21173-jetclient/reviews)
+[![Version](https://img.shields.io/jetbrains/plugin/v/21173?color=6b43fb)](https://plugins.jetbrains.com/plugin/21173-jetclient--the-ultimate-rest-client)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/21173?color=03d7dc)](https://plugins.jetbrains.com/plugin/21173-jetclient--the-ultimate-rest-client)
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/21173)](https://plugins.jetbrains.com/plugin/21173-jetclient--the-ultimate-rest-client/reviews)
 
-[JetClient](https://plugins.jetbrains.com/plugin/21173-jetclient) is a powerful HTTP client plugin for JetBrains IDEs (IntelliJ IDEA, GoLand, PyCharm, PhpStorm, etc.).
+[JetClient](https://plugins.jetbrains.com/plugin/21173-jetclient--the-ultimate-rest-client) is a powerful HTTP client plugin for JetBrains IDEs (IntelliJ IDEA, GoLand, PyCharm, PhpStorm, etc.).
 It is similar to Postman but has some advantages:
 
 - **Integration with source code** - import API from code, navigate from request to code and vice versa
