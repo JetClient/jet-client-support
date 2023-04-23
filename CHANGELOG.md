@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2023.1.8 (2023-04-23)
+### Fixed
+- [#13](https://github.com/AntonShuvaev/jet-client-support/issues/13) test scripts are not working on Windows
+
 ## 2023.1.7 (2023-04-21)
 ### Changed
 - Now test suite is the separate entity instead of an empty folder.
