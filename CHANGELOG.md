@@ -1,5 +1,20 @@
 Change Log
 ----------
+## 2023.1.9 (2023-05-02)
+### Added
+- Action to populate JSON body with OpenAI Chat GPT
+- [#15](https://github.com/AntonShuvaev/jet-client-support/issues/15) Action to generate code snippet for request and types for request and response JSON bodies
+### Changed
+- Display encoded characters in a decoded format in the response JSON view
+### Fixed
+- NullPointerException might occur when undo changes in URL field
+- Body type `Binary file` works incorrectly
+- NullPointerException when importing OpenAPI with schema without name
+- NullPointerException when importing OpenAPI with query parameter without required field
+- InvalidVirtualFileAccessException might occur
+- NumberFormatException might occur when populating JSON body with random data
+- IndexOutOfBoundsException might occur when saving request
+
 ## 2023.1.8 (2023-04-23)
 ### Fixed
 - [#13](https://github.com/AntonShuvaev/jet-client-support/issues/13) test scripts are not working on Windows
