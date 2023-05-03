@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-description: Submit a bug report
+about: Submit a bug report
 labels: ["bug"]
 
 ---
