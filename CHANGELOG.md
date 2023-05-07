@@ -1,5 +1,12 @@
 Change Log
 ----------
+## 2023.1.10 (2023-05-08)
+### Added
+- [#19](https://github.com/AntonShuvaev/jet-client-support/issues/19) Add support for OAuth2 implicit flow
+- [#20](https://github.com/AntonShuvaev/jet-client-support/issues/20) Option to disable certificate hostname validation
+### Fixed
+- Error might occur when IDE running on Java Runtime without JCEF support
+
 ## 2023.1.9 (2023-05-02)
 ### Added
 - Action to populate JSON body with OpenAI Chat GPT
