@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2023.1.11 (2023-05-25)
+### Added
+- [#21](https://github.com/AntonShuvaev/jet-client-support/issues/21) Support open in split view for requests (Shift+Enter or Alt+Double click)
+- Support for IDE version 2023.2 EAP
+### Fixed
+- [#23](https://github.com/AntonShuvaev/jet-client-support/issues/23) Path variables are not displayed when you import an openapi (swagger) file
+- [#25](https://github.com/AntonShuvaev/jet-client-support/issues/25) Import sync folder does not keep folder in sync after importing
+- Folder is not expanded on double-click in the requests tree
+
 ## 2023.1.10 (2023-05-08)
 ### Added
 - [#19](https://github.com/AntonShuvaev/jet-client-support/issues/19) Add support for OAuth2 implicit flow
