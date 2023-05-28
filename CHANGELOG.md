@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2023.1.12 (2023-05-29)
+### Fixed
+- [#27](https://github.com/AntonShuvaev/jet-client-support/issues/27) Multipart/form with file - Content length too long
+
 ## 2023.1.11 (2023-05-25)
 ### Added
 - [#21](https://github.com/AntonShuvaev/jet-client-support/issues/21) Support open in split view for requests (Shift+Enter or Alt+Double click)
