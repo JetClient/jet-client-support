@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2023.1.13 (2023-07-14)
+### Fixed
+- [#31](https://github.com/AntonShuvaev/jet-client-support/issues/31) Font size of url field does not change when changing font size in IDE settings
+- NullPointerException might occur when importing OpenAPI
+- Other minor fixes
+
 ## 2023.1.12 (2023-05-29)
 ### Fixed
 - [#27](https://github.com/AntonShuvaev/jet-client-support/issues/27) Multipart/form with file - Content length too long
