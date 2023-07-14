@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2023.1.14 (2023-07-14)
+### Fixed
+- Regression: ClassNotFoundException occurs when opening yaml file
+
 ## 2023.1.13 (2023-07-14)
 ### Fixed
 - [#31](https://github.com/AntonShuvaev/jet-client-support/issues/31) Font size of url field does not change when changing font size in IDE settings
