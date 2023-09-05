@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2023.1.15 (2023-09-05)
+### Fixed
+- NullPointerException might occur when importing OpenAPI
+- MismatchedInputException: No content to map due to end-of-input might occur
+- other minor fixes
+
 ## 2023.1.14 (2023-07-14)
 ### Fixed
 - Regression: ClassNotFoundException occurs when opening yaml file
