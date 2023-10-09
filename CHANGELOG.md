@@ -1,5 +1,12 @@
 Change Log
 ----------
+## 2023.1.16 (2023-10-09)
+### Added
+- Support for 2023.3 EAP
+### Fixed
+- "Slow operations are prohibited on EDT" error might occur
+- other minor fixes
+
 ## 2023.1.15 (2023-09-05)
 ### Fixed
 - NullPointerException might occur when importing OpenAPI
