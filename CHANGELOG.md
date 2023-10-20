@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2023.1.17 (2023-10-20)
+### Fixed
+- "Read access is allowed from inside read-action" error might occur
+- "Slow operations are prohibited on EDT" error might occur
+- other minor fixes
+
 ## 2023.1.16 (2023-10-09)
 ### Added
 - Support for 2023.3 EAP
