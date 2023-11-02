@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2023.1.18 (2023-11-02)
+### Added
+- Search everywhere action for requests and folders (Alt + Shift + J)
+### Fixed
+- [#36](https://github.com/AntonShuvaev/jet-client-support/issues/36)  Setting an environment variable that contains '-' is now working properly
+- "class StringReader cannot be cast to class String" error might occur
+- "Slow operations are prohibited on EDT" error might occur
+- "IncorrectOperationException: Sorry but parent has already been disposed" error might occur
+
 ## 2023.1.17 (2023-10-20)
 ### Fixed
 - "Read access is allowed from inside read-action" error might occur
