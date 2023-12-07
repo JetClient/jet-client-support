@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2023.1.19 (2023-12-08)
+### Fixed
+- [#46](https://github.com/AntonShuvaev/jet-client-support/issues/46) Query Param hides if unchecked and doesn't show up if checked
+- "project is already disposed" error might occur
+- "parent has already been disposed" error might occur
+- "NoSuchFieldError: Companion" occurs on RustRover
+- "UninitializedPropertyAccessException: lateinit property has not been initialized" error might occur
+- other minor fixes
+
 ## 2023.1.18 (2023-11-02)
 ### Added
 - Search everywhere action for requests and folders (Alt + Shift + J)
