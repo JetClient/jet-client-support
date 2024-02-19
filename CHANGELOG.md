@@ -1,5 +1,17 @@
 Change Log
 ----------
+## 2023.1.20 (2024-02-19)
+### Fixed
+- [#49](https://github.com/AntonShuvaev/jet-client-support/issues/49) The HTTP protocol configured in settings is not enforced
+- IDE might freeze when opening the request editor
+- A table cell is not updated when changing column width
+- Changing a table cell now updates the value immediately
+- Other minor fixes
+### Added
+- [#50](https://github.com/AntonShuvaev/jet-client-support/issues/50) Added support for Binary Base64 body type
+- Added an option to enable/disable opening folder properties with a single click
+
+
 ## 2023.1.19 (2023-12-08)
 ### Fixed
 - [#46](https://github.com/AntonShuvaev/jet-client-support/issues/46) Query Param hides if unchecked and doesn't show up if checked
