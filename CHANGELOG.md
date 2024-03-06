@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.1.0 (2024-03-05)
+### Added
+- [#41](https://github.com/AntonShuvaev/jet-client-support/issues/41) History of requests and test runs
+
 ## 2023.1.20 (2024-02-19)
 ### Fixed
 - [#49](https://github.com/AntonShuvaev/jet-client-support/issues/49) The HTTP protocol configured in settings is not enforced
