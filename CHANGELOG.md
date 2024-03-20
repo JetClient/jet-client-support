@@ -1,5 +1,15 @@
 Change Log
 ----------
+## 2024.1.1 (2024-03-20)
+### Added
+- [#30](https://github.com/AntonShuvaev/jet-client-support/issues/30) GraphQL support
+### Optimized
+- Request editor opens faster with lazy loading for tabs
+### Fixed
+- [#53](https://github.com/AntonShuvaev/jet-client-support/issues/53) Ignore Content-Length header when importing from cURL
+- [#53](https://github.com/AntonShuvaev/jet-client-support/issues/53) Remove quote escaping in JSON body when importing from cURL
+- Various minor fixes
+
 ## 2024.1.0 (2024-03-05)
 ### Added
 - [#41](https://github.com/AntonShuvaev/jet-client-support/issues/41) History of requests and test runs
