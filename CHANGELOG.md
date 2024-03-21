@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.1.2 (2024-03-21)
+### Fixed
+- [#54](https://github.com/AntonShuvaev/jet-client-support/issues/54) Fixed a regression where variables were incorrectly resolved with quotes.
+
 ## 2024.1.1 (2024-03-20)
 ### Added
 - [#30](https://github.com/AntonShuvaev/jet-client-support/issues/30) GraphQL support
