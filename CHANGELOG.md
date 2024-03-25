@@ -1,5 +1,13 @@
 Change Log
 ----------
+## 2024.1.3 (2024-03-25)
+### Fixed
+- [#30](https://github.com/AntonShuvaev/jet-client-support/issues/30) In Rider, the default GraphQL config cannot be chosen in the request editor
+- [#55](https://github.com/AntonShuvaev/jet-client-support/issues/30) Invalid encoding of GraphQL requests 
+- Error "RuntimeExceptionWithAttachments: Read access is allowed from inside read-action" might occur
+- Fixed variable completion in URL field
+- Other minor fixes
+
 ## 2024.1.2 (2024-03-21)
 ### Fixed
 - [#54](https://github.com/AntonShuvaev/jet-client-support/issues/54) Fixed a regression where variables were incorrectly resolved with quotes.
