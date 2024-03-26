@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.1.4 (2024-03-26)
+### Fixed
+- IDE theme selection background is overridden by the plugin
+
 ## 2024.1.3 (2024-03-25)
 ### Fixed
 - [#30](https://github.com/AntonShuvaev/jet-client-support/issues/30) In Rider, the default GraphQL config cannot be chosen in the request editor
