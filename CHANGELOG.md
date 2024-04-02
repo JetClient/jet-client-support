@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2024.1.5 (2024-04-02)
+### Added
+- Option to open selected requests or folders in a preview tab
+### Fixed
+[#60](https://github.com/AntonShuvaev/jet-client-support/issues/60) Tabs are lost on IDE restart
+[#57](https://github.com/AntonShuvaev/jet-client-support/issues/57) Importing Postman collections might fail in some cases
+[#56](https://github.com/AntonShuvaev/jet-client-support/issues/56) Send Content-Length: 0 header for requests with an empty body and for methods other than GET
+- Other minor fixes
+
 ## 2024.1.4 (2024-03-26)
 ### Fixed
 - IDE theme selection background is overridden by the plugin
