@@ -1,5 +1,18 @@
 Change Log
 ----------
+## 2024.1.6 (2024-04-11)
+### Added
+- Added a console in the Services tool window for requests, responses, and script output, addressing issues [#2](https://github.com/AntonShuvaev/jet-client-support/issues/2)
+[#8](https://github.com/AntonShuvaev/jet-client-support/issues/8)
+[#58](https://github.com/AntonShuvaev/jet-client-support/issues/58)
+[#61](https://github.com/AntonShuvaev/jet-client-support/issues/61)
+- JSON objects can now be used in jc.sendRequest and jc.runRequest
+- Added prompt input for AI JSON body generation
+### Fixed
+- Enhanced script error output
+- [#62](https://github.com/AntonShuvaev/jet-client-support/issues/62) jc.response.to.be.error fails the test if the http code is 400-599
+- Various minor fixes
+
 ## 2024.1.5 (2024-04-02)
 ### Added
 - Option to open selected requests or folders in a preview tab
