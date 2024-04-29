@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2024.1.7 (2024-04-29)
+### Fixed
+- [#66](https://github.com/AntonShuvaev/jet-client-support/issues/66) Error "Parameter specified as non-null is null" when response has no reason phrase
+- [#65](https://github.com/AntonShuvaev/jet-client-support/issues/65) Request can't be opened after reimport
+- Other minor fixes
+
 ## 2024.1.6 (2024-04-11)
 ### Added
 - Added a console in the Services tool window for requests, responses, and script output, addressing issues [#2](https://github.com/AntonShuvaev/jet-client-support/issues/2)
