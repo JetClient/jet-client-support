@@ -1,5 +1,27 @@
 Change Log
 ----------
+## 2024.2.0 (2024-05-10)
+### Added
+- [#59](https://github.com/AntonShuvaev/jet-client-support/issues/59) Added a Discord server for support and feedback: https://discord.gg/23hufAcU8n
+- Introduced Projects (root collections) with their own environments
+- Added built-in libraries: ajv, atob, btoa, chai, cheerio, crypto-js, csv-parse/lib/sync, lodash, moment, tv4, uuid, xml2js
+- New `jc.runTestSuite` method for executing test suites from scripts
+- Added support for `setTimeout` and `clearTimeout` in scripts
+- The `response.json()` method now supports an optional JSONPath expression
+- File paths can now be relative to the IDE project root for request body files, multipart file fields, and other file fields
+### Changed
+- File Sync is now available in the free version
+- Updated file sync format for better code review and reduced merge conflicts: one file per request/folder, formatted in markdown with embedded blocks (TOML for request/folder data, JSON5 for variables, JavaScript for scripts)
+- Simplified folder variables: now they are not separated by environment, only project variables are
+- Only local (not shared) variables can now be set from scripts
+- Eliminated Global variables that were shared between collections, now only project variables are available within the project
+- Renamed `default` to `globals` in the variables editor, for variables available for any environment or even if no environment is selected
+- Removed methods `jc.globalVariables`, `jc.folderVariables.setLocalEnv`, `setSharedEnv`, `setLocalDefault`, `setSharedDefault` and replaced them with `jc.globals.set`, `jc.environment.set`, `jc.folderVariables.set` for simplified variable management
+- `jc.runRequest`, `jc.sendRequest`, and `jc.runFolder` methods now accept a request/folder path instead of an ID
+### Fixed
+- Improved code snippets generation
+- Various minor fixes and enhancements
+
 ## 2024.1.8 (2024-05-10)
 ### Fixed
 - Error "Read access is allowed from inside read-action" might occur
