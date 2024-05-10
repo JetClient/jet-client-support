@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.1.8 (2024-05-10)
+### Fixed
+- Error "Read access is allowed from inside read-action" might occur
+
 ## 2024.1.7 (2024-04-29)
 ### Fixed
 - [#66](https://github.com/AntonShuvaev/jet-client-support/issues/66) Error "Parameter specified as non-null is null" when response has no reason phrase
