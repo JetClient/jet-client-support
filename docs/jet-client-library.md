@@ -54,7 +54,7 @@ jc.variables.replaceIn("Hi, my name is {{myName}}")
 <a name="global-variables"></a>
 ### Global Variables
 
-Use the `jc.globals` methods to access and manipulate global variables across all environments and requests.
+Use the `jc.globals` methods to access and manipulate global variables that are available regardless of the selected environment.
 
 To verify if a global variable exists:
 ```js
