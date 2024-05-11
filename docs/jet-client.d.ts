@@ -2,103 +2,113 @@
  * Main entry point for interacting with the JetClient API.
  */
 declare const jc: JetClient;
-
 /**
  * Global object that allows you to write to the console.
  */
-declare var console: Console;
+declare const console: Console;
 
+/**
+ * Attempts to load a module first from a directory specified in project settings.
+ * If no directory is specified or the module is not found, it defaults to loading
+ * from JetClient's built-in modules.
+ */
+declare function require(moduleName: string): any;
+
+/**
+ * Schedules a function to be executed after a specified delay.
+ */
+declare function setTimeout(func: Function, delay: number): number;
+
+/**
+ * Cancels a timeout previously established by calling setTimeout.
+ */
+declare function clearTimeout(id: number): void;
 
 interface JetClient {
     /**
      * The current HTTP request being executed.
      */
     request: HttpRequest;
-
     /**
      * The response of the executed request or `null` if no request has been executed yet.
      */
     response: HttpResponse | null;
-
-    /**
-     * The folder of the current request
-     */
-    folder: Folder;
-
     /**
      * Contains all variables in scope.
      */
     variables: AllVariables;
-
+    /**
+     * Contains environment-specific variables.
+     */
+    environment: EnvironmentVariables;
     /**
      * Contains global variables.
      */
-    globalVariables: GlobalVariables;
-
+    globals: GlobalVariables;
     /**
      * Contains folder-specific variables for the current folder.
      */
     folderVariables: FolderVariables;
-
     /**
      * Chai.js `expect` function for assertions.
      */
-    expect: Chai.ExpectStatic;
+    expect: Expect;
 
     /**
-     * Defines a test with a given name and function to execute. The test fails if the function throws an error.
+     * Defines a test with the specified name and function. Fails if the function throws an error.
+     * @param testName - Name of the test.
+     * @param func - Function to execute.
      */
     test(testName: string, func: Function): void;
 
     /**
-     * Searches for a folder with an ID prefix and returns it or `null` if not found.
-     * Returns Folder or null if not found. Returned Folder is a read-only object.
+     * Searches for a request by path. Changes to the returned request won't persist.
+     * Note: Slashes in request names ('/') are replaced with underscores ('_'). Use an optional HTTP method prefix (e.g., "/folder/GET:request_name") to differentiate requests with the same name but different methods. Drag-and-drop a request in the editor to get the path.
+     * @param path - Path to the request, can be relative to the current folder or an absolute path from the project root.
+     * @return HttpRequest or null.
      */
-    findFolder(idPrefix: string): Folder | null;
+    findRequest(path: string): HttpRequest | null;
 
     /**
-     * Searches for a request with an ID prefix and returns it or `null` if not found.
-     * Returns HttpRequest or null if not found. Changes to the returned request will not be persisted.
+     * Sends a request without running its pre-request and test scripts.
+     * Note: Slashes in request names ('/') are replaced with underscores ('_'). Use an optional HTTP method prefix (e.g., "/folder/GET:request_name") to differentiate requests with the same name but different methods. Drag-and-drop a request in the editor to get the path.
+     * @param requestOrPath - Request object or path, can be relative to the current folder or an absolute path from the project root.
+     * @return Promise resolving with the HTTP response.
      */
-    findRequest(idPrefix: string): HttpRequest | null;
+    sendRequest(requestOrPath: HttpRequest | string): Promise<HttpResponse>;
 
     /**
-     * Sends a request and returns a promise that resolves with the HTTP response.
-     * This method does not run pre-request and test scripts of the request.
+     * Runs a request including its pre-request and test scripts.
+     * Note: Slashes in request names ('/') are replaced with underscores ('_'). Use an optional HTTP method prefix (e.g., "/folder/GET:request_name") to differentiate requests with the same name but different methods. Drag-and-drop a request in the editor to get the path.
+     * @param requestOrPath - Request object or path, can be relative to the current folder or an absolute path from the project root.
+     * @return Promise resolving with the HTTP response.
      */
-    sendRequest(requestOrIdPrefix: HttpRequest | string): Promise<HttpResponse>;
+    runRequest(requestOrPath: HttpRequest | string): Promise<HttpResponse>;
 
     /**
-     * Runs a request and returns a promise that resolves with the HTTP response.
-     * This method runs pre-request and test scripts of the request if they exist.
+     * Executes all requests in the specified folder and its sub-folders.
+     * @param path - Path of the folder, either relative to the current folder or an absolute path from the project root. Drag-and-drop a folder in the editor to get the path.
+     * @return Promise that resolves once execution is complete.
      */
-    runRequest(requestOrIdPrefix: HttpRequest | string): Promise<HttpResponse>;
+    runFolder(path: string): Promise<void>;
 
     /**
-     * Runs a folder by running all requests in the folder and all sub-folders.
-     * Returns a promise that resolves when the folder has been executed.
+     * Executes the specified test suite.
+     * @param path - Path of the test suite, either relative to the current folder or an absolute path from the project root. Drag-and-drop a test suite in the editor to get the path.
+     * @return Promise that resolves once execution is complete.
      */
-    runFolder(idPrefix: string): Promise<void>;
-}
-
-interface Folder {
-    id: string;
-    name: string;
-    folders: Folder[];
-    parent: Folder | null;
-    variables: FolderVariables;
-    requests: HttpRequest[];
+    runTestSuite(path: string): Promise<void>;
 }
 
 interface HttpRequest {
-    id: string;
-    name: string;
+    id?: string;
+    name?: string;
     method: HttpMethod | string;
     url: string;
-    pathVariables: PathVariable[];
-    headers: Header[];
-    body: RequestBody;
-    auth: RequestAuth;
+    pathVariables?: PathVariable[] | Record<string, string>;
+    headers?: Header[] | Record<string, string>;
+    body?: RequestBody;
+    auth?: RequestAuth;
 
     /**
      * Sets the HTTP method for the request.
@@ -183,12 +193,22 @@ interface HttpRequest {
     /**
      * Sets the request body as multipart form data.
      */
-    setBodyMultipartForm(params: FormDataParam[]): HttpRequest;
+    setBodyMultipartForm(params: FormDataParam[] | Record<string, string>): HttpRequest;
 
     /**
      * Sets the request body as a file.
      */
     setBodyFile(filePath: string): HttpRequest;
+
+    /**
+     * Sets the request body as a base64 encoded binary.
+     */
+    setBodyBase64(base64: string): HttpRequest;
+
+    /**
+     * Sets the request body as a GraphQL query.
+     */
+    setBodyGraphQL(query: string, variables?: Record<string, any>): HttpRequest;
 
     /**
      * Removes the request body.
@@ -219,56 +239,42 @@ interface HttpRequest {
 declare class HttpRequest implements HttpRequest {
 }
 
-declare enum HttpMethod {
-    GET = "GET",
-    POST = "POST",
-    PUT = "PUT",
-    DELETE = "DELETE",
-    PATCH = "PATCH",
-    HEAD = "HEAD",
-    OPTIONS = "OPTIONS"
-}
+declare type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';
 
 interface HttpResponse {
     /**
      * The HTTP status code of the response.
      */
     code: number;
-
     /**
      * The HTTP status text of the response.
      */
     status: string;
-
     /**
      * The headers of the response.
      */
     headers: ResponseHeaders;
-
     /**
      * The time it took for the response to be received, in milliseconds.
      */
     responseTime: number;
-
     /**
      * The size of the response, in bytes.
      */
     responseSize: number;
-
     /**
      * The content type of the response.
      */
     contentType: ContentType;
-
     /**
      * An object containing assertion methods for the response.
      */
     to: AssertableTo;
 
     /**
-     * Parses the response body as JSON and returns the resulting object.
+     * Parses the response body as JSON. If a JSONPath is provided, returns the value at the specified path; otherwise, returns the entire JSON object.
      */
-    json(): object;
+    json(jsonPath?: string): object;
 
     /**
      * Returns the response body as a string.
@@ -319,6 +325,10 @@ interface Console {
     info(message: string): void;
 
     info(...data: any[]): void;
+
+    time(label: string): void;
+
+    timeEnd(label: string): void;
 }
 
 interface AssertableTo {
@@ -350,9 +360,9 @@ interface AssertableBe {
 }
 
 interface AssertableHave {
-    /*
-    Inverts the following assertion.
-    */
+    /**
+     Inverts the following assertion.
+     */
     not: AssertableHave;
 
     /**
@@ -419,22 +429,22 @@ interface PathVariable {
 interface RequestBody {
     type: RequestBodyType;
     raw: string;
-    formData: FormDataParam[];
-    urlEncoded: UrlEncodedParam[];
+    formData: FormDataParam[] | Record<string, string>;
+    urlEncoded: UrlEncodedParam[] | Record<string, string>;
     file: string;
 }
 
-declare enum RequestBodyType {
-    NO_BODY = "NO_BODY",
-    PLAIN = "PLAIN",
-    JSON = "JSON",
-    HTML = "HTML",
-    XML = "XML",
-    FORM_DATA = "FORM_DATA",
-    FORM_URL_ENCODED = "FORM_URL_ENCODED",
-    BINARY_FILE = "BINARY_FILE"
-}
-
+declare type RequestBodyType =
+    'NO_BODY'
+    | 'PLAIN'
+    | 'JSON'
+    | 'HTML'
+    | 'XML'
+    | 'FORM_DATA'
+    | 'FORM_URL_ENCODED'
+    | 'BINARY_FILE'
+    | 'BINARY_BASE64'
+    | 'GRAPHQL';
 declare type FormDataParam = FormDataTextParam | FormDataFileParam;
 
 interface FormDataTextParam {
@@ -457,17 +467,11 @@ interface UrlEncodedParam {
 interface RequestAuth {
     type: AuthType;
     basic: BasicAuth;
-    bearer: BearerTokenAuth;
+    bearer: BearerTokenAuth | string;
     apiKey: ApiKeyAuth;
 }
 
-declare enum AuthType {
-    INHERIT_FROM_PARENT = "INHERIT_FROM_PARENT",
-    NO_AUTH = "NO_AUTH",
-    BASIC = "BASIC",
-    BEARER = "BEARER",
-    API_KEY = "API_KEY"
-}
+declare type AuthType = 'INHERIT_FROM_PARENT' | 'NO_AUTH' | 'BASIC' | 'BEARER' | 'API_KEY';
 
 interface BasicAuth {
     username: string;
@@ -506,150 +510,106 @@ interface AllVariables {
     replaceIn(text: string): string;
 }
 
-interface GlobalVariables {
-    /**
-     * Checks if a global variable with the given name exists.
-     */
-    has(name: string): boolean;
-
-    /**
-     * Gets the value of a global variable by name or `null` if not found.
-     */
-    get(name: string): any | null;
-
-    /**
-     * Replaces global variable placeholders in a text string with their corresponding values.
-     */
-    replaceIn(text: string): string;
-
-    /**
-     * Sets a default value for a global variable.
-     */
-    setDefault(name: string, value: any): void;
-
-    /**
-     * Sets the value of a global environment variable for the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
-     */
-    setEnv(name: string, value: any, envGroupId?: string): void;
-
-    /**
-     * Removes the default value of a global variable.
-     */
-    removeDefault(name: string): void;
-
-    /**
-     * Removes a global environment variable for the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
-     */
-    removeEnv(name: string, envGroupId?: string): void;
-
-    /**
-     * Clears all global variables, including default and environment-specific variables.
-     */
-    clear(): void;
-
-    /**
-     * Clears all default global variables.
-     */
-    clearDefault(): void;
-
-    /**
-     * Clears all environment-specific global variables for the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
-     */
-    clearEnv(envGroupId?: string): void;
-}
-
 interface FolderVariables {
     /**
-     * Checks if a folder variable with the given name exists.
+     * Checks if a variable exists in the folder scope.
      */
     has(name: string): boolean;
 
     /**
-     * Gets the value of a folder variable by name or `null` if not found.
+     * Retrieves a variable's value by name within the folder, or `null` if not found.
      */
     get(name: string): any | null;
 
     /**
-     * Replaces folder variable placeholders in a text string with their corresponding values.
+     * Replaces placeholders in a text string with folder-scoped variable values.
      */
     replaceIn(text: string): string;
 
     /**
-     * Sets a local default value for a folder variable.
+     * Sets or updates a variable's value in the folder scope.
      */
-    setLocalDefault(name: string, value: any): void;
+    set(name: string, value: any): void;
 
     /**
-     * Sets a shared default value for a folder variable.
+     * Removes a variable from the folder scope.
      */
-    setSharedDefault(name: string, value: any): void;
+    unset(name: string): void;
 
     /**
-     * Sets the value of a local environment variable for the folder and the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
+     * Clears all variables within the folder scope.
      */
-    setLocalEnv(name: string, value: any, envGroupId?: string): void;
+    clear(): void;
+}
+
+interface EnvironmentVariables {
+    /**
+     * Checks if a variable exists in the active environment of the specified group. If no group is specified, the Default group is used.
+     */
+    has(name: string, envGroup?: string): boolean;
 
     /**
-     * Sets the value of a shared environment variable for the folder and the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
+     * Gets the value of a variable by name in the active environment of the specified group. If no group is specified, the Default group is used.
      */
-    setSharedEnv(name: string, value: any, envGroupId?: string): void;
+    get(name: string, envGroup?: string): any | null;
 
     /**
-     * Removes the local default value of a folder variable.
+     * Replaces placeholders in a text string with environment-scoped variable values. If no group is specified, the Default group is used.
      */
-    removeLocalDefault(name: string): void;
+    replaceIn(text: string, envGroup?: string): string;
 
     /**
-     * Removes the shared default value of a folder variable.
+     * Sets or updates a variable's value in the active environment of the specified group. If no group is specified, the Default group is used.
      */
-    removeSharedDefault(name: string): void;
+    set(name: string, value: any, envGroup?: string): void;
 
     /**
-     * Removes a local environment variable for the folder and the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
+     * Removes a variable from the active environment of the specified group. If no group is specified, the Default group is used.
      */
-    removeLocalEnv(name: string, envGroupId?: string): void;
+    unset(name: string, envGroup?: string): void;
 
     /**
-     * Removes a shared environment variable for the folder and the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
+     * Clears all variables in the active environment of the specified group. If no group is specified, the Default group is used.
      */
-    removeSharedEnv(name: string, envGroupId?: string): void;
+    clear(envGroup?: string): void;
+}
+
+interface GlobalVariables {
+    /**
+     * Checks if a global variable exists.
+     */
+    has(name: string): boolean;
 
     /**
-     * Clears all local folder variables, including default and environment-specific variables.
+     * Retrieves a global variable's value by name, or `null` if not found.
      */
-    clearLocal(): void;
+    get(name: string): any | null;
 
     /**
-     * Clears all shared folder variables, including default and environment-specific variables.
+     * Replaces placeholders in a text string with global variable values.
      */
-    clearShared(): void;
+    replaceIn(text: string): string;
 
     /**
-     * Clears all local default folder variables.
+     * Assigns or updates a global variable's value.
      */
-    clearLocalDefault(): void;
+    set(name: string, value: any): void;
 
     /**
-     * Clears all shared default folder variables.
+     * Deletes a global variable.
      */
-    clearSharedDefault(): void;
+    unset(name: string): void;
 
     /**
-     * Clears all local environment variables for the folder and the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
+     * Erases all global variables.
      */
-    clearLocalEnv(envGroupId?: string): void;
+    clear(): void;
+}
 
-    /**
-     * Clears all shared environment variables for the folder and the active environment of the provided environment group.
-     * If the environment group is not provided, the first environment group will be used.
-     */
-    clearSharedEnv(envGroupId?: string): void;
+interface Expect {
+    (val: any, message?: string): Chai.Assertion;
+
+    fail(message?: string): never;
+
+    fail(actual: any, expected: any, message?: string, operator?: Chai.Operator): never;
 }
