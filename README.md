@@ -207,7 +207,7 @@ Also, see [JetClient Library Types](docs/jet-client.d.ts) for type definitions.
 
 JetClient includes built-in libraries such
 as `ajv`, `atob`, `btoa`, `chai`, `cheerio`, `crypto-js`, `csv-parse/lib/sync`, `lodash`,
-`moment`, `tv4`, `uuid`, and `xml2js`, which you can import using the require function.
+`moment`, `tv4`, `uuid`, and `xml2js`, which you can import using the `require` function.
 Additionally, you can add your own libraries to the scripts. Navigate to `Settings > Tools > JetClient` and set
 the `Libraries directory`.
 If you are using npm libraries, specify the directory containing your `package.json` and `node_modules`.
