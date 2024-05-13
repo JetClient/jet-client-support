@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2024.2.1 (2024-05-13)
+### Fixed
+- [#71](https://github.com/AntonShuvaev/jet-client-support/issues/71) Restored functionality of environment-scoped variables in folders
+- GraphQL body panel is empty when GraphQL is not configured
+- Can't apply changes in the folder properties
+
 ## 2024.2.0 (2024-05-10)
 ### Added
 - [#59](https://github.com/AntonShuvaev/jet-client-support/issues/59) Added a Discord server for support and feedback: https://discord.gg/23hufAcU8n
