@@ -512,32 +512,42 @@ interface AllVariables {
 
 interface FolderVariables {
     /**
-     * Checks if a variable exists in the folder scope.
+     * Checks if a variable exists in the folder.
      */
     has(name: string): boolean;
 
     /**
-     * Retrieves a variable's value by name within the folder, or `null` if not found.
+     * Retrieves the value of a variable by name from the folder. Returns `null` if not found.
      */
     get(name: string): any | null;
 
     /**
-     * Replaces placeholders in a text string with folder-scoped variable values.
+     * Replaces folder variable placeholders in a text string with their respective values.
      */
     replaceIn(text: string): string;
 
     /**
-     * Sets or updates a variable's value in the folder scope.
+     * Sets or updates a variable in the folder.
      */
     set(name: string, value: any): void;
 
     /**
-     * Removes a variable from the folder scope.
+     * Sets or updates a variable within the active environment of the specified environment group, or defaults to the 'Default' environment group if none is specified.
+     */
+    setEnv(name: string, value: any, envGroup?: string): void;
+
+    /**
+     * Removes a variable from the folder.
      */
     unset(name: string): void;
 
     /**
-     * Clears all variables within the folder scope.
+     * Removes a variable from the active environment of the specified environment group, or defaults to the 'Default' environment group if none is specified.
+     */
+    unsetEnv(name: string, envGroup?: string): void;
+
+    /**
+     * Clears all variables from the folder.
      */
     clear(): void;
 }

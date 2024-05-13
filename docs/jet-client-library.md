@@ -146,9 +146,19 @@ To set a local folder variable:
 jc.folderVariables.set("variableName", "variableValue")
 ```
 
+To set a variable within the active environment of a specific environment group in the folder (defaults to the 'Default' environment group if none specified):
+```js
+jc.folderVariables.setEnv("variableName", "variableValue", "envGroup");
+```
+
 To delete a specific folder variable:
 ```js
 jc.folderVariables.unset("variableName")
+```
+
+To delete a variable from the active environment of a specific environment group in the folder (defaults to the 'Default' environment group if no group is specified):
+```js
+jc.folderVariables.unsetEnv("variableName", "envGroup");
 ```
 
 To clear all local variables in the folder:

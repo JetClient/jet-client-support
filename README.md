@@ -113,11 +113,15 @@ environment. They are organized within a JSON object with the environment as a t
 }
 ```
 
-Folder variables are defined in a JSON object without an environment property:
+Folder variables can include both general variables and environment-specific variables. General variables are accessible regardless of the selected environment, 
+while environment-specific variables are only available when the corresponding environment is selected:
 
 ```json5
 {
-  myFolderVar: 'myValue'
+  myFolderVar: 'myValue',
+  dev: {
+    myFolderVar: 'devValue'
+  }
 }
 ```
 
@@ -143,12 +147,14 @@ Variables can also reference other variables, as shown in the example below:
 
 Variables are resolved in the following order, from highest to lowest priority:
 
-1. Runtime variables
-2. Local folder variables
-3. Shared folder variables
-4. Variables from all parent folders (both local and shared)
-5. Environment variables
-6. Globals
+1. Runtime Variables
+2. Environment-specific Local Folder Variables
+3. Environment-specific Shared Folder Variables
+4. Local Folder Variables
+5. Shared Folder Variables
+6. Variables from All Parent Folders
+7. Environment Variables
+8. Globals
 
 <a name="scripts"></a>
 
