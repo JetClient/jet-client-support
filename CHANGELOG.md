@@ -1,5 +1,8 @@
 Change Log
 ----------
+## 2024.2.2(2024-05-14)
+- [#72](https://github.com/AntonShuvaev/jet-client-support/issues/72) Fixed regression where it was impossible to specify sync directory
+- 
 ## 2024.2.1 (2024-05-13)
 ### Fixed
 - [#71](https://github.com/AntonShuvaev/jet-client-support/issues/71) Restored functionality of environment-scoped variables in folders
