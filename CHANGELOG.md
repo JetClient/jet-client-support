@@ -1,8 +1,20 @@
 Change Log
 ----------
+## 2024.2.3(2024-05-21)
+### Added
+- [#70](https://github.com/AntonShuvaev/jet-client-support/discussions/70) Auto-sync feature
+- Script snippets
+- Added `jc.collectionVariables` to work with top-level folder (collection) variables
+### Changed
+- Combined the Pre-request and Tests tabs into a single Scripts tab
+### Fixed
+- Issue where migration might be applied unnecessarily for the new version
+- Other minor fixes
+
 ## 2024.2.2(2024-05-14)
+### Fixed
 - [#72](https://github.com/AntonShuvaev/jet-client-support/issues/72) Fixed regression where it was impossible to specify sync directory
-- 
+
 ## 2024.2.1 (2024-05-13)
 ### Fixed
 - [#71](https://github.com/AntonShuvaev/jet-client-support/issues/71) Restored functionality of environment-scoped variables in folders
