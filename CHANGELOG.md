@@ -8,6 +8,7 @@ Change Log
 ### Changed
 - Combined the Pre-request and Tests tabs into a single Scripts tab
 ### Fixed
+- [#73](https://github.com/AntonShuvaev/jet-client-support/issues/73) Request names were not displayed in history and previously opened tabs after IDE restart until indexing finished
 - Issue where migration might be applied unnecessarily for the new version
 - Other minor fixes
 
