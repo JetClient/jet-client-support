@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2024.2.4 (2024-06-05)
+### Added
+- APIs are now displayed in the project tree
+- JSON body now supports comments and other JSON5 features such as trailing commas, single quotes, and unquoted keys
+### Fixed
+- [#75](https://github.com/AntonShuvaev/jet-client-support/issues/75): Fixed OAuth2 authorization issue
+- [#76](https://github.com/AntonShuvaev/jet-client-support/issues/76): Fixed GraphQL issues with multiple projects
+- Various other fixes
+
 ## 2024.2.3(2024-05-21)
 ### Added
 - [#70](https://github.com/AntonShuvaev/jet-client-support/discussions/70) Auto-sync feature
