@@ -1,5 +1,22 @@
 Change Log
 ----------
+## 2024.2.5 (2024-06-20)
+### Added
+-  [#45](https://github.com/AntonShuvaev/jet-client-support/issues/45), [#77](https://github.com/AntonShuvaev/jet-client-support/issues/77) Markdown documentation for requests and folders
+-  Preview for requests in toolwindow
+-  Prevent requests from being sent when variables are unresolved
+-  [#82](https://github.com/AntonShuvaev/jet-client-support/issues/82) Support importing JAX-RS with jakarta.ws.rs package
+### Changed
+-  [#80](https://github.com/AntonShuvaev/jet-client-support/issues/80) Selecting environment applies to all open tabs
+-  Moved code snippets generation to the toolwindow
+-  Moved console from services toolwindow to a separate toolwindow
+-  Improved console output highlighting
+### Fixed
+-  Fixed [#79](https://github.com/AntonShuvaev/jet-client-support/issues/79) Variables defined in folders can be dynamically resolved in environment variables
+-  Fixed StackOverflowError when importing API with circular references
+-  Fixed "Read access is allowed from inside read-action"
+-  Fixed "Missing extension point: io.jetclient.graphql.editorProvider"
+
 ## 2024.2.4 (2024-06-05)
 ### Added
 - APIs are now displayed in the project tree
