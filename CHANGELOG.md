@@ -1,5 +1,11 @@
 Change Log
 ----------
+
+## 2024.2.6 (2024-06-21)
+### Fixed
+- Fixed issue with using runtime variables in folders and environments
+- Fixed issue with changing the order of environments
+
 ## 2024.2.5 (2024-06-20)
 ### Added
 -  [#45](https://github.com/AntonShuvaev/jet-client-support/issues/45), [#77](https://github.com/AntonShuvaev/jet-client-support/issues/77) Markdown documentation for requests and folders
