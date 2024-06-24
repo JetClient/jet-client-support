@@ -1,6 +1,16 @@
 Change Log
 ----------
 
+## 2024.2.7 (2024-06-24)
+### Added
+-  [#83](https://github.com/AntonShuvaev/jet-client-support/issues/83) Reintroduced import actions in toolwindow toolbar
+-  Reintroduced aliases for environments
+### Changed
+-  [#83](https://github.com/AntonShuvaev/jet-client-support/issues/83) Improved icons for APIs to better differentiate between APIs and folders
+### Fixed
+-  Fixed NullPointerException
+-  [#84](https://github.com/AntonShuvaev/jet-client-support/issues/84) Fixed issue where JetClient folder appears under .idea folder when it is not used
+
 ## 2024.2.6 (2024-06-21)
 ### Fixed
 - Fixed issue with using runtime variables in folders and environments
