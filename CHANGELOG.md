@@ -1,5 +1,8 @@
 Change Log
 ----------
+## 2024.2.8 (2024-06-26)
+### Fixed
+- [#86](https://github.com/AntonShuvaev/jet-client-support/issues/86) Fixed regression causing an error when using OAuth2
 
 ## 2024.2.7 (2024-06-24)
 ### Added
