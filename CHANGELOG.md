@@ -1,5 +1,19 @@
 Change Log
 ----------
+## 2024.2.9 (2024-07-01)
+### Added
+-  `jc.readFile` in script library to read file content
+-  [#85](https://github.com/AntonShuvaev/jet-client-support/issues/85) Support for cookies management in scripts
+-  [#85](https://github.com/AntonShuvaev/jet-client-support/issues/85) Option to disable cookie jar
+-  Option to disable auto-encoding of URL
+-  "Clear console" action
+### Changed
+-  Cookies management moved to project level
+-  Request settings moved to folder level
+### Fixed
+-  [#89](https://github.com/AntonShuvaev/jet-client-support/issues/89) Handle invalid JSON responses without failing
+-  Other minor fixes
+
 ## 2024.2.8 (2024-06-26)
 ### Fixed
 - [#86](https://github.com/AntonShuvaev/jet-client-support/issues/86) Fixed regression causing an error when using OAuth2
