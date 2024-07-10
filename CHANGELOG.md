@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2024.2.10 (2024-07-10)
+### Fixed
+-  Resolved UI freezing issue when opening the IDE
+-  Fixed error occurring when markdown preview is not supported in the IDE
+-  Fixed "AssertionError: Wrong line separators" when "\r\n" appears in console output
+
 ## 2024.2.9 (2024-07-01)
 ### Added
 -  `jc.readFile` in script library to read file content
