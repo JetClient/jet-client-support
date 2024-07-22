@@ -1,5 +1,28 @@
 Change Log
 ----------
+## 2024.3.0 (2024-07-22)
+### Added
+-  Support for 2024.2
+-  Ability to run the test suite from the test suite editor
+-   `jc.testCase` to create test cases in test suites that can be run separately
+-  Display test results in the console toolwindow
+-  Option to hide requests in test results
+-  Navigate to source from error stack trace in the console toolwindow
+-  Action to create a test suite from selected requests or folders
+-  `jc.testSuiteVariables` to manage test suite variables
+-  Enhanced and added new code snippets
+### Changed
+-  Test suites are now synced to "_TS_testSuiteName.md" files instead of being saved as folders
+-  Improved buttons for showing/hiding variables and scripts editors
+### Fixed
+-  Folder documentation not being saved to the sync file
+-  Importing Postman collection variables
+-  Error "BridgeException: uri.badTarget [/icons/jet-client-additional-tools-13.svg"
+
+## 2024.2.11 (2024-07-12)
+### Fixed
+- Fixed memory leak
+
 ## 2024.2.10 (2024-07-10)
 ### Fixed
 -  Resolved UI freezing issue when opening the IDE
