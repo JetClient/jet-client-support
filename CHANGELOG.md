@@ -1,6 +1,6 @@
 Change Log
 ----------
-## 2024.3.0 (2024-07-22)
+## 2024.3.0 (2024-07-23)
 ### Added
 -  Support for 2024.2
 -  Ability to run the test suite from the test suite editor
