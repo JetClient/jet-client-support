@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2024.3.1 (2024-07-29)
+### Added
+-  Ability to create examples (child requests) for requests
+### Fixed
+-  Editors now show a full context menu instead of a simple one
+-  Fixed error "Wrong line separators" occurring when console output contains "\r\n"
+-  Resolved issue with Docs view sometimes disappearing
+-  Paste snippet action now works correctly in version 2024.2
+
 ## 2024.3.0 (2024-07-23)
 ### Added
 -  Support for 2024.2
