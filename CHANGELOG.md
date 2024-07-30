@@ -1,6 +1,6 @@
 Change Log
 ----------
-## 2024.3.1 (2024-07-29)
+## 2024.3.1 (2024-07-30)
 ### Added
 -  Ability to create examples (child requests) for requests
 ### Fixed
