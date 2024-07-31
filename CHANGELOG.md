@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2024.3.2 (2024-07-31)
+### Added
+- Request history size setting
+### Optimized
+- [#94](https://github.com/AntonShuvaev/jet-client-support/issues/94) Request content of large requests is now hidden in the console output and opens in a separate tab
+- [#94](https://github.com/AntonShuvaev/jet-client-support/issues/94) When console and preview toolwindows are closed, their content is not updated
+### Fixed
+- [#95](https://github.com/AntonShuvaev/jet-client-support/issues/95) Fixed regression causing the GraphQL toolbar to disappear
+
 ## 2024.3.1 (2024-07-30)
 ### Added
 -  Ability to create examples (child requests) for requests
