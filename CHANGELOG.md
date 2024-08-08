@@ -1,5 +1,18 @@
 Change Log
 ----------
+## 2024.3.3 (2024-08-08)
+### Added
+-   Support for resolving and navigating to global variables in scripts
+-   [#98](https://github.com/AntonShuvaev/jet-client-support/issues/98) Option to toggle visibility of auto-generated headers
+### Changed
+-   [#98](https://github.com/AntonShuvaev/jet-client-support/issues/98) Auto-generated Content-Type header is now separated from user-defined headers
+-   Custom libraries path configuration moved to project settings
+### Fixed
+-  [#98](https://github.com/AntonShuvaev/jet-client-support/issues/98) Content-Type header is automatically changed
+-  Example documentation deserialized incorrectly
+-  Issue preventing examples from opening after refresh
+-  Various other fixes
+
 ## 2024.3.2 (2024-07-31)
 ### Added
 - Request history size setting
