@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2024.3.4 (2024-08-14)
+### Fixed
+-  Error when request name exceeds 255 characters
+-  Parent scripts and built-in library might not be resolved in the script editor
+-  "Slow operations are prohibited on EDT" error occurring sometimes
+-  Empty panel when opening test suite from recent files
+-  Shortcut for running test suite not working
+-  Various other minor fixes
+
 ## 2024.3.3 (2024-08-08)
 ### Added
 -   Support for resolving and navigating to global variables in scripts
