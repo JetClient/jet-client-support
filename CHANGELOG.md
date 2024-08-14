@@ -1,5 +1,10 @@
 Change Log
 ----------
+## 2024.3.5 (2024-08-14)
+### Fixed
+- NullPointerException might occur
+- Error "Write-unsafe context! Model changes are allowed from write-safe contexts only" might occur
+
 ## 2024.3.4 (2024-08-14)
 ### Fixed
 -  Error when request name exceeds 255 characters
