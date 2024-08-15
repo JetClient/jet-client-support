@@ -1,5 +1,10 @@
 Change Log
 ----------
+## 2024.3.6 (2024-08-15)
+### Fixed
+- Auto-generated `Content-Type` header not being added to the request
+- Error "File name too long" occurring when the request name is too long
+
 ## 2024.3.5 (2024-08-14)
 ### Fixed
 - NullPointerException might occur
