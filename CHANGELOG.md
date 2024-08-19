@@ -1,5 +1,17 @@
 Change Log
 ----------
+## 2024.3.7 (2024-08-19)
+### Fixed
+-  [#100](https://github.com/AntonShuvaev/jet-client-support/issues/100) Reintroduced `jc.runFolder`
+-  [#101](https://github.com/AntonShuvaev/jet-client-support/issues/101) Changes in the OpenAPI file were not reflected in the imported API
+-  [#104](https://github.com/AntonShuvaev/jet-client-support/issues/104) Error when reading an empty sync file
+-  External references in OpenAPI (Swagger) were not resolved on Windows
+-  Scripts were not updated after a request or folder restore
+-  Incorrect line separators (`\r\n`) error
+-  Other minor fixes and improvements
+### Changed 
+-  Improved syntax highlighting for Request Preview, replacing TextMate-based highlighting
+
 ## 2024.3.6 (2024-08-15)
 ### Fixed
 - Auto-generated `Content-Type` header not being added to the request
