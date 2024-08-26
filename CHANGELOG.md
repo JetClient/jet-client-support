@@ -1,5 +1,16 @@
 Change Log
 ----------
+## 2024.3.8 (2024-08-26)
+### Fixed
+-  [#106](https://github.com/AntonShuvaev/jet-client-support/issues/106): `jc.cookies` methods failing when the URL has no protocol
+-  `IllegalArgumentException: object is not an instance of declaring class` error
+-  Incorrect serialization of empty headers
+-  Various other minor issues
+
+### Optimized
+-  Enhanced syntax highlighting for the Console by replacing the TextMate-based highlighting
+-  Console no longer affects the performance of running requests and tests
+
 ## 2024.3.7 (2024-08-19)
 ### Fixed
 -  [#100](https://github.com/AntonShuvaev/jet-client-support/issues/100) Reintroduced `jc.runFolder`
