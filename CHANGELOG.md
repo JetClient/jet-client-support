@@ -1,5 +1,18 @@
 Change Log
 ----------
+## 2024.3.9 (2024-09-03)
+### Added
+-  Test suite can now return a value
+-  GitHub Copilot support in script and body editors
+### Fixed
+-  Variable renaming in scripts occasionally not working
+-  Console opening unexpectedly when selecting a request
+-  [#102](https://github.com/AntonShuvaev/jet-client-support/issues/102) Save all files when opening a request tab
+-  Request execution shortcut not working until the request is focused
+-  Setting a variable with a numerical property name from a script not functioning correctly
+-  Other minor fixes
+
+
 ## 2024.3.8 (2024-08-26)
 ### Fixed
 -  [#106](https://github.com/AntonShuvaev/jet-client-support/issues/106): `jc.cookies` methods failing when the URL has no protocol
