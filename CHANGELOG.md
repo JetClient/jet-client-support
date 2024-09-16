@@ -1,5 +1,18 @@
 Change Log
 ----------
+## 2024.3.10 (2024-09-16)
+### Added
+- New async methods: `jc.sendRequestAsync`, `jc.runRequestAsync`, `jc.testCaseAsync`, `jc.runTestSuiteAsync`, `jc.runFolderAsync`
+### Changed
+- `jc.sendRequest`, `jc.runRequest`, `jc.testCase`, `jc.runTestSuite`, and `jc.runFolder` are now synchronous
+- Requests in the console output always open in a new tab
+### Optimized
+- Enhanced performance of the console tool window
+### Fixed
+- Navigation and completion now correctly resolve variables defined in parent folder scripts
+- Minor bug fixes
+
+
 ## 2024.3.9 (2024-09-03)
 ### Added
 -  Test suite can now return a value
