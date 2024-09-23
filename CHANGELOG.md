@@ -1,5 +1,13 @@
 Change Log
 ----------
+## 2024.3.11 (2024-09-23)
+### Added
+- In scripts, executing a specific test case now also executes the associated variables and functions used within the test case.
+### Fixed
+- Improved exception handling in scripts.
+- Other minor fixes and improvements.
+
+
 ## 2024.3.10 (2024-09-16)
 ### Added
 - New async methods: `jc.sendRequestAsync`, `jc.runRequestAsync`, `jc.testCaseAsync`, `jc.runTestSuiteAsync`, `jc.runFolderAsync`
