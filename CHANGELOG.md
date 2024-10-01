@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.3.12 (2024-10-01)
+### Fixed
+- [#109](https://github.com/AntonShuvaev/jet-client-support/issues/109) Error when getting OAuth2 token
+
 ## 2024.3.11 (2024-09-23)
 ### Added
 - In scripts, executing a specific test case now also executes the associated variables and functions used within the test case.
