@@ -3,6 +3,7 @@ Change Log
 ## 2024.3.12 (2024-10-01)
 ### Fixed
 - [#109](https://github.com/AntonShuvaev/jet-client-support/issues/109) Error when getting OAuth2 token
+-  Other minor fixes
 
 ## 2024.3.11 (2024-09-23)
 ### Added
