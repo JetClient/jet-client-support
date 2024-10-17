@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2024.3.14 (2024-10-17)
+### Fixed
+- Various minor fixes
+### Changed
+- [#113](https://github.com/JetClient/jet-client-support/issues/113) Uncaught errors in request and test suite scripts are now propagated to the top level
+
 ## 2024.3.13 (2024-10-14)
 ### Fixed
 - Various minor fixes
