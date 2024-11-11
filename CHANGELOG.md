@@ -1,5 +1,15 @@
 Change Log
 ----------
+## 2024.3.15 (2024-11-11)
+### Added
+- Support for client certificates
+### Fixed
+- [#116](https://github.com/AntonShuvaev/jet-client-support/issues/116) Draft names don't update after rename until refresh
+- Responses now display even when test script fails with error
+- Fixed StackOverflowError when importing OpenAPI with circular references
+- Updated Apache HTTP Client to version 5.4.1 to fix various issues
+- Various minor fixes
+
 ## 2024.3.14 (2024-10-17)
 ### Fixed
 - Various minor fixes
