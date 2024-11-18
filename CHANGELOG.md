@@ -1,5 +1,13 @@
 Change Log
 ----------
+## 2024.3.16 (2024-11-18)
+### Fixed
+- [#119](https://github.com/JetClient/jet-client-support/issues/119) Crash on code generation 
+- [#118](https://github.com/JetClient/jet-client-support/issues/118) Crash on any request
+- "Multi threaded access requested by thread" error might occur when running scripts
+### Changed
+- Restricted access to Java classes in scripts
+
 ## 2024.3.15 (2024-11-11)
 ### Added
 - Support for client certificates
