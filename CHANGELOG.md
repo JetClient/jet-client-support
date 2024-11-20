@@ -1,5 +1,10 @@
 Change Log
 ----------
+## 2024.3.17 (2024-11-20)
+### Fixed
+- [#119](https://github.com/JetClient/jet-client-support/issues/119) Crash on code generation
+- [#118](https://github.com/JetClient/jet-client-support/issues/118) Crash on any request
+
 ## 2024.3.16 (2024-11-18)
 ### Fixed
 - [#119](https://github.com/JetClient/jet-client-support/issues/119) Crash on code generation 
