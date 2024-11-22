@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.3.18 (2024-11-22)
+### Fixed
+- [#121](https://github.com/JetClient/jet-client-support/issues/121) Fixed setTimeout functionality in scripts that was broken since 2024.3.16
+
 ## 2024.3.17 (2024-11-20)
 ### Fixed
 - [#119](https://github.com/JetClient/jet-client-support/issues/119) Crash on code generation
