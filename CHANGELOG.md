@@ -1,5 +1,21 @@
 Change Log
 ----------
+## 2024.3.19 (2024-12-02)
+### Added
+- Enhanced inline expressions in {{...}} syntax:
+  - Supports: variables, literals, function calls, arithmetic operations, string concatenation, ?? (coalesce) operator
+  - Built-in functions:
+      - `$pickOne(array)` - Select random item from array
+      - `$randomInt(min, max)` - Generate random integer
+      - `$textInput(label)` - Prompt for user input
+      - `$readFileAsText(filePath)` - Read file contents
+      - `$eval(jsCode)` - Execute JavaScript
+      - `$exec(command)` - Run shell commands
+      - And more...
+### Changed
+- Removed random and OpenAI data generation features
+- Removed methods (`get`, `has`, `replaceIn`) from `jc.folderVariables`, `jc.environment`, `jc.globals`, `jc.collectionVariables`, and `jc.testSuiteVariables` (use `jc.variables` instead).
+
 ## 2024.3.18 (2024-11-22)
 ### Fixed
 - [#121](https://github.com/JetClient/jet-client-support/issues/121) Fixed setTimeout functionality in scripts that was broken since 2024.3.16
