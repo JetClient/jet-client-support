@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2024.3.20 (2024-12-06)
+### Fixed
+- [#122](https://github.com/JetClient/jet-client-support/issues/122) Hyphens in variable names causing ExpressionEvaluationException
+- [#123](https://github.com/JetClient/jet-client-support/issues/123) Response time not including connection establishment time
+- [#124](https://github.com/JetClient/jet-client-support/issues/124) Setting variable value from script not overriding existing value
+
 ## 2024.3.19 (2024-12-02)
 ### Added
 - Enhanced inline expressions in {{...}} syntax:
