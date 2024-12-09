@@ -1,5 +1,16 @@
 Change Log
 ----------
+## 2024.3.21 (2024-12-09)
+
+### Added
+- [#113](https://github.com/JetClient/jet-client-support/issues/113) `jc.execution.setNextRequest` and `jc.execution.skipRequest` methods to control execution flow in the collection runner
+- [#120](https://github.com/JetClient/jet-client-support/issues/120) Project-level Headers
+- Project-level Auth
+
+### Fixed
+- [#124](https://github.com/JetClient/jet-client-support/issues/124) Setting variable values from scripts not working correctly
+- Minor fixes
+
 ## 2024.3.20 (2024-12-06)
 ### Fixed
 - [#122](https://github.com/JetClient/jet-client-support/issues/122) Hyphens in variable names causing ExpressionEvaluationException
