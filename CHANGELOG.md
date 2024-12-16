@@ -1,6 +1,8 @@
 Change Log
 ----------
 ## 2024.3.22 (2024-12-16)
+### Added
+- Support escaping special characters in expressions with backslashes
 ### Changed
 - Improved expression functions
 ### Fixed
