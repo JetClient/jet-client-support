@@ -1,5 +1,14 @@
 Change Log
 ----------
+## 2024.3.22 (2024-12-16)
+### Changed
+- Improved expression functions
+### Fixed
+- `jc.runFolder` now executes requests in the correct order
+- Fixed issues with folder moving
+- Variables editor now automatically adds closing quotes when typing an opening quote
+- Other minor fixes
+
 ## 2024.3.21 (2024-12-09)
 
 ### Added
