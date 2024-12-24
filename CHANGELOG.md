@@ -1,5 +1,16 @@
 Change Log
 ----------
+## 2024.3.23 (2024-12-24)
+### Added
+- Updated `httpsnippet` library with support for additional languages
+### Changed
+- Replaced `jc.runTestSuite`, `jc.runTestSuiteAsync`, and `jc.testSuiteVariables` with `jc.runScript`, `jc.runScriptAsync`, and `jc.scriptVariables`
+- Removed "Binary Base64" body type
+### Fixed
+- Request icons now update correctly after changing the request method
+- Other minor fixes
+
+
 ## 2024.3.22 (2024-12-16)
 ### Added
 - Support escaping special characters in expressions with backslashes
