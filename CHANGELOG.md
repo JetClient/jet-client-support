@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.3.24 (2025-01-01)
+### Fixed
+- Resolved an issue where running scripts could fail with error
+
 ## 2024.3.23 (2024-12-24)
 ### Added
 - Updated `httpsnippet` library with support for additional languages
