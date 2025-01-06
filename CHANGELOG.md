@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.3.25 (2025-01-06)
+### Fixed
+- [#124](https://github.com/JetClient/jet-client-support/issues/124) Variable set via script not immediately resolved in request URL
+
 ## 2024.3.24 (2025-01-01)
 ### Fixed
 - Resolved an issue where running scripts could fail with error
