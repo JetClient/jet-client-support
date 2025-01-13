@@ -1,5 +1,10 @@
 Change Log
 ----------
+## 2024.3.26 (2025-01-13)
+### Fixed
+- [#126](https://github.com/JetClient/jet-client-support/issues/126) Disable auto-retry on 429 errors
+- [#127](https://github.com/JetClient/jet-client-support/issues/127) Cookies not set for subdomains
+
 ## 2024.3.25 (2025-01-06)
 ### Fixed
 - [#124](https://github.com/JetClient/jet-client-support/issues/124) Variable set via script not immediately resolved in request URL
