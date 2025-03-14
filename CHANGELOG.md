@@ -1,5 +1,15 @@
 Change Log
 ----------
+## 2024.3.27 (2025-03-14)
+### Fixed
+- Fixed URL field background.
+- [#130](https://github.com/JetClient/jet-client-support/issues/130) Hide previous response when sending a new request.
+- [#134](https://github.com/JetClient/jet-client-support/issues/134) Encode `&` and `#` when writing them in query parameter table cells.
+### Added
+- [#132](https://github.com/JetClient/jet-client-support/issues/132) Support export to Postman and OpenAPI.
+- Added `jc.writeFile` method to write file content.
+- Added global `sleep` method to pause script execution.
+
 ## 2024.3.26 (2025-01-13)
 ### Fixed
 - [#126](https://github.com/JetClient/jet-client-support/issues/126) Disable auto-retry on 429 errors
