@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2024.3.28 (2025-04-21)
+### Fixed
+- [#140](https://github.com/JetClient/jet-client-support/issues/140): Error when username is not set in IDE proxy settings
+- [#139](https://github.com/JetClient/jet-client-support/issues/139): Error when using certain self-signed certificates
+- [#136](https://github.com/JetClient/jet-client-support/issues/136): NullPointerException when executing a request
+
 ## 2024.3.27 (2025-03-14)
 ### Fixed
 - Fixed URL field background.
