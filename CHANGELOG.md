@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2024.3.30 (2025-04-30)
+### Fixed
+- [#143](https://github.com/JetClient/jet-client-support/issues/143) Fixed regression causing floating point numbers in `jc.response.json()` to be processed incorrectly in scripts
+
 ## 2024.3.29 (2025-04-28)
 ### Fixed
 - [#142](https://github.com/JetClient/jet-client-support/issues/142) Fixed issue where `jc.execution.skipRequest()` in pre-request scripts fails to work when request is run from script
