@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2024.3.31 (2025-05-31)
+### Added
+- Notification about JetClient becoming a paid product starting from August 1, 2025.
+### Changed
+- JetClient will require a paid licence starting from August 1, 2025. A 14-day free trial will be available.
+
 ## 2024.3.30 (2025-04-30)
 ### Fixed
 - [#143](https://github.com/JetClient/jet-client-support/issues/143) Fixed regression causing floating point numbers in `jc.response.json()` to be processed incorrectly in scripts
