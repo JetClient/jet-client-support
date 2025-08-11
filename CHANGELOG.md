@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2025.1.0 (2025-08-01)
+### Changed
+- JetClient is now paid (14-day free trial included)
+
 ## 2024.3.31 (2025-05-31)
 ### Added
 - Notification about JetClient becoming a paid product starting from August 1, 2025.
