@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2026.1.0
+### Added
+- CLI test runner (distributed separately from plugin)
+- Generate HTML Report action in test results toolbar
+- Rerun tests action in test results toolbar
+
 ## 2025.1.0 (2025-08-01)
 ### Changed
 - JetClient is now paid (14-day free trial included)
