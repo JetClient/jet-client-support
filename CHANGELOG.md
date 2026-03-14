@@ -1,5 +1,10 @@
 Change Log
 ----------
+## 2026.1.1
+### Fixed
+- [#151](https://github.com/JetClient/jet-client-support/issues/151) Improved reloading of JetClient data and scripts after branch switches, refresh/state changes, and bulk edits so reopened tabs show current content more reliably and stay in a consistent state
+- Fixed a NullPointerException in editor gutter annotation painting caused by nullable gutter color keys
+
 ## 2026.1.0
 ### Added
 - CLI test runner (distributed separately from plugin)
