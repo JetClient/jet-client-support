@@ -1,5 +1,9 @@
 Change Log
 ----------
+## 2026.1.2
+### Fixed
+- [#151](https://github.com/JetClient/jet-client-support/issues/151) Fixed sync tree inconsistency after Git branch switches on large repositories that caused folders from both branches to appear in the tree
+
 ## 2026.1.1
 ### Fixed
 - [#151](https://github.com/JetClient/jet-client-support/issues/151) Improved reloading of JetClient data and scripts after branch switches, refresh/state changes, and bulk edits so reopened tabs show current content more reliably and stay in a consistent state
