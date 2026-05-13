@@ -1,5 +1,11 @@
 Change Log
 ----------
+## 2026.1.3 (2026-05-12)
+### Fixed
+- Fixed API import from source code aborting entirely when a single module's parser failed (e.g. due to bundled Kotlin plugin errors); affected modules are now skipped with a warning notification and the import continues for the rest
+- Fixed ClassCastException in the docs tool window when the bundled Markdown plugin's experimental Compose preview renderer is selected
+- Fixed HTML report tree grouping all `jc.test` results before the related API calls when tests and requests were interleaved in a test suite script; the tree now renders items in the original script execution order
+
 ## 2026.1.2
 ### Fixed
 - [#151](https://github.com/JetClient/jet-client-support/issues/151) Fixed sync tree inconsistency after Git branch switches on large repositories that caused folders from both branches to appear in the tree
