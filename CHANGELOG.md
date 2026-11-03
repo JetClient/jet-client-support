@@ -1,5 +1,16 @@
 Change Log
 ----------
+## 2026.2.1 (2026-11-02)
+### Fixed
+- Fixed Postman and OpenAPI export failing with "Access is denied" on Windows when a folder was selected as the target; Browse now opens a save dialog, the field rejects folders and missing parent folders, and relative paths resolve against the project directory
+- Fixed IDE freezes during API import from source code; parsing now runs in the background and no longer blocks write actions
+- Fixed read-access errors when choosing an action from the variable tooltip link or the intention popup on IDE 2026.2
+- Fixed repeated InvalidPathException in the multipart form table for file values the OS rejects, such as quoted Windows paths
+- Fixed cURL import keeping the quotes of `-F 'file=@"..."'` filenames as part of the file path
+- Fixed "Too many non-blocking read actions" errors when many script editors reopened at once
+- Fixed "Write-unsafe context" errors when script documents were updated while opening request and folder editors
+- Fixed all script runs failing with "Invalid CommonJS root folder" when the configured libraries path does not exist; scripts now run with bundled libraries and the console shows a warning
+
 ## 2026.2.0 (2026-07-23)
 ### Changed
 - Added support for IDE version 2026.2; this release requires IDE 2026.2 or later
